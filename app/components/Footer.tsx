@@ -1,39 +1,33 @@
-﻿export default function Footer() {
+import Image from 'next/image';
+import Link from 'next/link';
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="border-t mt-10">
-      <div className="mx-auto max-w-7xl px-4 py-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-sm">
-        <div>
-          <div className="font-semibold mb-2">Company</div>
-          <ul className="space-y-1 text-slate-600">
-            <li><a href="/about">About</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
+    <footer className="border-t border-border/40">
+      <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
+        <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
+          <Image
+            src="/zyorix-logo-embedded.svg"
+            alt="Zyorix Logo"
+            width={80}
+            height={21}
+            className="opacity-60"
+          />
+          <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
+            &copy; {currentYear} Zyorix Inc. All rights reserved.
+          </p>
         </div>
-        <div>
-          <div className="font-semibold mb-2">Services</div>
-          <ul className="space-y-1 text-slate-600">
-            <li><a href="/services">FinOps Assessment</a></li>
-            <li><a href="/services">Cost Optimization</a></li>
-            <li><a href="/services">Governance</a></li>
-          </ul>
-        </div>
-        <div>
-          <div className="font-semibold mb-2">Resources</div>
-          <ul className="space-y-1 text-slate-600">
-            <li><a href="/case-studies">Case Studies</a></li>
-            <li><a href="/pricing">Pricing</a></li>
-          </ul>
-        </div>
-        <div>
-          <div className="font-semibold mb-2">Legal</div>
-          <ul className="space-y-1 text-slate-600">
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/terms">Terms of Service</a></li>
-          </ul>
+        <div className="flex items-center gap-6 text-sm text-muted-foreground">
+          <Link href="/privacy" className="transition-colors hover:text-foreground">
+            Privacy Policy
+          </Link>
+          <Link href="/terms" className="transition-colors hover:text-foreground">
+            Terms of Service
+          </Link>
         </div>
       </div>
-      <div className="text-center text-xs text-slate-500 pb-8">© 2025 Zyorix.com. All rights reserved.</div>
     </footer>
   );
 }
