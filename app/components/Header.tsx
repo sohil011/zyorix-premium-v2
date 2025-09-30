@@ -14,10 +14,8 @@
           <a href="/about" className="hover:text-slate-900">About</a>
           <a href="/contact" className="hover:text-slate-900">Contact</a>
         </nav>
-        <a
-          href="/contact"
-          className="ml-4 inline-flex items-center rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-500"
-        >
+        <a href="/contact"
+           className="ml-4 inline-flex items-center rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-500">
           Book Consultation
         </a>
       </div>
