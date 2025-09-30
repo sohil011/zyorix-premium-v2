@@ -33,3 +33,5 @@ Modern Next.js (App Router) + Tailwind project for Zyorix, a premium FinOps cons
 ## Contributing
 - Branch from 'main' -> feature branch -> PR.
 - Every PR must include: summary, screenshots (mobile and desktop), and verification steps ('npm run lint', 'next build').
+
+CI validation: 2025-09-30 13:22:39
