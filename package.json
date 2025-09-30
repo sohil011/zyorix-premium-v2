@@ -6,7 +6,7 @@
                     "dev":  "next dev --turbopack",
                     "build":  "next build --turbopack",
                     "start":  "next start",
-                    "lint":  "cross-env ESLINT_USE_FLAT_CONFIG=true eslint . --no-eslintrc --config eslint.config.mjs"
+                    "lint":  "eslint ."
                 },
     "dependencies":  {
                          "next":  "15.5.4",
